@@ -5,8 +5,6 @@ import "@nomicfoundation/hardhat-toolbox"
 import "@nomicfoundation/hardhat-chai-matchers"
 import "hardhat-deploy"
 import "hardhat-contract-sizer"
-import "@appliedblockchain/chainlink-plugins-fund-link"
-import "./tasks"
 
 dotenv.config()
 
@@ -99,7 +97,7 @@ const config: HardhatUserConfig = {
     solidity: {
         compilers: [
             {
-                version: "0.8.7",
+                version: "0.8.17",
             },
             {
                 version: "0.6.6",
