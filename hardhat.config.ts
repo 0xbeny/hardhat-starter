@@ -49,7 +49,7 @@ const config: HardhatUserConfig = {
             //   accounts: {
             //     mnemonic: MNEMONIC,
             //   },
-            saveDeployments: true,
+            // saveDeployments: true,
             chainId: 5,
         },
         mainnet: {
@@ -58,13 +58,13 @@ const config: HardhatUserConfig = {
             //   accounts: {
             //     mnemonic: MNEMONIC,
             //   },
-            saveDeployments: true,
+            // saveDeployments: true,
             chainId: 1,
         },
         polygon: {
             url: POLYGON_MAINNET_RPC_URL,
             accounts: PRIVATE_KEY !== undefined ? [PRIVATE_KEY] : [],
-            saveDeployments: true,
+            // saveDeployments: true,
             chainId: 137,
         },
     },
@@ -82,19 +82,20 @@ const config: HardhatUserConfig = {
         noColors: true,
         // coinmarketcap: process.env.COINMARKETCAP_API_KEY,
     },
-    contractSizer: {
-        runOnCompile: false,
-        only: ["APIConsumer", "KeepersCounter", "PriceConsumerV3", "RandomNumberConsumer"],
-    },
-    namedAccounts: {
-        deployer: {
-            default: 0, // here this will by default take the first account as deployer
-            1: 0, // similarly on mainnet it will take the first account as deployer. Note though that depending on how hardhat network are configured, the account 0 on one network can be different than on another
-        },
-        feeCollector: {
-            default: 1,
-        },
-    },
+    // contractSizer: {
+    //     runOnCompile: false,
+    //     only: ["APIConsumer", "KeepersCounter", "PriceConsumerV3", "RandomNumberConsumer"],
+        
+    // },
+    // namedAccounts: {
+    //     deployer: {
+    //         default: 0, // here this will by default take the first account as deployer
+    //         1: 0, // similarly on mainnet it will take the first account as deployer. Note though that depending on how hardhat network are configured, the account 0 on one network can be different than on another
+    //     },
+    //     feeCollector: {
+    //         default: 1,
+    //     },
+    // },
     solidity: {
         compilers: [
             {
